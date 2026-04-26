@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://amalpradeep.github.io/kunjulakshmi-portfolio",
+  "homepage": "https://prismofstories25-lab.github.io/kunjulakshmi-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
