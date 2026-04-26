@@ -1,0 +1,54 @@
+/* Writing Page */
+.pub-banner { padding:60px 0; background:#050d1a; }
+.pub-card { background:linear-gradient(135deg,rgba(6,182,212,0.08),rgba(0,114,198,0.05)); border:1px solid rgba(6,182,212,0.2); border-radius:40px; padding:48px; display:grid; grid-template-columns:auto 1fr auto; gap:40px; align-items:center; }
+.pub-icon { font-size:3.5rem; }
+.pub-info h3 { font-family:'Lora',serif; font-size:1.8rem; font-weight:700; margin-bottom:8px; }
+.pub-info p { color:#8ab4c8; }
+.pub-stats { display:flex; gap:28px; align-items:center; }
+.pub-stat { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.ps-num { font-size:1.4rem; font-weight:800; background:linear-gradient(135deg,#06b6d4,#38bdf8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.ps-label { font-size:0.75rem; color:#8ab4c8; font-weight:500; }
+
+.articles-section { padding:80px 0; background:#0b2545; }
+.article-featured-card { background:rgba(255,255,255,0.04); border:1px solid rgba(6,182,212,0.2); border-radius:40px; padding:48px; display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center; position:relative; overflow:hidden; margin-bottom:24px; }
+.article-featured-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(6,182,212,0.04),transparent); pointer-events:none; }
+.afc-label { position:absolute; top:24px; right:24px; background:rgba(6,182,212,0.15); border:1px solid rgba(6,182,212,0.3); color:#06b6d4; padding:6px 14px; border-radius:50px; font-size:0.8rem; font-weight:600; }
+.afc-meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.afc-content h2 { font-family:'Lora',serif; font-size:1.8rem; font-weight:700; line-height:1.3; margin-bottom:20px; }
+.afc-content p { color:#8ab4c8; font-size:0.95rem; line-height:1.7; margin-bottom:16px; }
+.afc-content p em { color:#38bdf8; font-style:italic; }
+.afc-highlights { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:20px; }
+.afc-highlight { display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:10px 12px; font-size:0.85rem; color:#8ab4c8; }
+.highlight-icon { font-size:1.1rem; }
+.afc-electric-visual { width:240px; height:240px; position:relative; display:flex; align-items:center; justify-content:center; margin:0 auto; }
+.electric-ring { position:absolute; border-radius:50%; border:1px solid rgba(6,182,212,0.3); animation:electricPulse 2.5s ease-in-out infinite; }
+.r1 { width:100%; height:100%; }
+.r2 { width:75%; height:75%; border-color:rgba(6,182,212,0.5); animation-delay:0.5s; }
+.r3 { width:50%; height:50%; border-color:rgba(6,182,212,0.7); animation-delay:1s; }
+.electric-center { position:relative; z-index:5; display:flex; flex-direction:column; align-items:center; gap:8px; background:rgba(6,182,212,0.08); border:1px solid rgba(6,182,212,0.3); border-radius:16px; padding:20px 24px; }
+
+.articles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.article-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:24px; padding:28px; transition:0.3s; }
+.article-card:hover { border-color:rgba(6,182,212,0.3); background:rgba(255,255,255,0.08); transform:translateY(-4px); box-shadow:0 0 30px rgba(6,182,212,0.25); }
+.article-card h3 { font-size:1rem; font-weight:700; margin-bottom:10px; line-height:1.4; }
+.article-card p { font-size:0.88rem; color:#8ab4c8; margin-bottom:16px; line-height:1.6; }
+.article-link { display:inline-flex; align-items:center; gap:6px; color:#06b6d4; font-weight:600; font-size:0.9rem; transition:0.3s; }
+.article-link:hover { color:#00e4ff; }
+.article-link span { transition:transform 0.3s; }
+.article-link:hover span { transform:translateX(4px); }
+
+.writing-cta-box { text-align:center; background:linear-gradient(135deg,rgba(6,182,212,0.08),rgba(0,114,198,0.04)); border:1px solid rgba(6,182,212,0.2); border-radius:40px; padding:60px; margin-top:64px; }
+.writing-cta-box h3 { font-family:'Lora',serif; font-size:2rem; font-weight:700; margin-bottom:12px; }
+.writing-cta-box p { color:#8ab4c8; margin-bottom:28px; }
+
+@media(max-width:1024px){
+  .pub-card { grid-template-columns:1fr; gap:24px; }
+  .pub-stats { justify-content:center; }
+  .article-featured-card { grid-template-columns:1fr; }
+  .articles-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:600px){
+  .articles-grid { grid-template-columns:1fr; }
+  .afc-highlights { grid-template-columns:1fr; }
+  .writing-cta-box { padding:32px 20px; }
+}
