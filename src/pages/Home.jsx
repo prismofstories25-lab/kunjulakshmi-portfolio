@@ -5,11 +5,10 @@ import useAOS from '../hooks/useAOS'
 import './Home.css'
 
 const PHRASES = [
-  'Marine Researcher',
-  'Carcinologist (Crustacean Study)',
+  'Research Scholar',
+  'Marine Ecologist',
   'Shrimp Taxonomist',
   'Science Communicator',
-  '"That Shrimply Amazing Girl!"',
 ]
 
 const PROFILE_IMG = 'https://pbs.twimg.com/profile_images/1752758109863575552/AAGtZhIv_400x400.jpg'
@@ -80,7 +79,7 @@ function StatCard({ count, label, icon, delay }) {
   }, [])
   return (
     <div className="stat-card" ref={ref} data-aos="fade-up" data-aos-delay={delay}>
-      {count ? <div className="stat-number">{c}+</div> : <div className="stat-icon">{icon}</div>}
+      {count ? <div className="stat-number">{c}</div> : <div className="stat-icon">{icon}</div>}
       <div className="stat-label">{label}</div>
     </div>
   )
@@ -110,7 +109,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-content">
-          <div className="hero-badge"><span className="badge-dot" /> Carcinology · Taxonomy · Science Communication</div>
+          <div className="hero-badge"><span className="badge-dot" /> Centre for Climate Change Studies · Sathyabama Institute</div>
           <h1 className="hero-title">
             <span className="title-line">Kunjulakshmi</span>
             <span className="title-highlight">K.</span>
@@ -119,11 +118,11 @@ export default function Home() {
             <span className="typewriter">{typed}</span>
           </p>
           <p className="hero-desc">
-            Marine researcher in Dr. Amit Kumar's Lab at Sathyabama Institute, passionately exploring the world of crustaceans. Highlighting biodiversity through shrimp taxonomy and sharing the wonders of the deep through accessible science writing.
+            Research Scholar specializing in biological oceanography, marine molecular ecology, and the taxonomy of freshwater ornamental shrimps across the Western Ghats and Indian coastline.
           </p>
           <div className="hero-actions">
             <Link to="/research" className="btn-primary">Explore Research <span>→</span></Link>
-            <Link to="/writing" className="btn-ghost">Read My Writing</Link>
+            <Link to="/about" className="btn-ghost">View Academic Profile</Link>
           </div>
           <div className="hero-scroll-hint">
             <div className="scroll-mouse"><div className="scroll-wheel" /></div>
@@ -140,10 +139,10 @@ export default function Home() {
       <section className="stats-section">
         <div className="container">
           <div className="stats-grid">
-            <StatCard count={5} label="Peer-Reviewed Publications" delay="0" />
-            <StatCard count={4} label="Discovered & Described Species" delay="100" />
-            <StatCard icon="🔍" label="Shrimp Taxonomist" delay="200" />
-            <StatCard icon="🔬" label="Marine Biology Lab" delay="300" />
+            <StatCard count={6} label="Peer-Reviewed Publications" delay="0" />
+            <StatCard count={3} label="Research Grants Awarded" delay="100" />
+            <StatCard count={14} label="Symposiums & Events Organized" delay="200" />
+            <StatCard icon="🏆" label="Veronica Rodrigues Award Winner" delay="300" />
           </div>
         </div>
       </section>
@@ -153,24 +152,20 @@ export default function Home() {
         <div className="container">
           <div className="about-snap-grid">
             <div className="about-snap-text" data-aos="fade-right">
-              <div className="section-tag">About Me</div>
-              <h2 className="section-title">That <em>Shrimply Amazing</em> Girl!</h2>
+              <div className="section-tag">Academic Profile</div>
+              <h2 className="section-title">Bridging Taxonomy <em>&amp; Conservation</em></h2>
               <p>
-                I'm Kunjulakshmi — a curious carcinologist navigating the fascinating intersection of marine ecology,
-                shrimp taxonomy, and science communication. Working under Dr. Amit Kumar's Marine Biology Lab, my research 
-                involves extensive study of freshwater and marine crustaceans along the Indian coast and Western Ghats.
+                I am Kunjulakshmi K, a Research Scholar at the Centre for Climate Change Studies, Sathyabama Institute of Science and Technology. Following my M.Sc. in Marine Science from Goa University, I have dedicated my career to marine ecology and carcinology.
               </p>
               <p>
-                Whether I'm formally documenting the rediscovery of the genus <em>Atyopsis</em> after 72 years, or writing engaging stories 
-                for <strong>The Curiosity Quotient</strong> on Substack, my goal is to bridge the gap between 
-                complex scientific discoveries and public wonder.
+                My fundamental research assesses the conservation priority of freshwater ornamental shrimps in the Central Western Ghats. My projects have been generously supported by the <strong>Rufford Foundation</strong> and the <strong>Association for Tropical Biology and Conservation (ATBC)</strong>.
               </p>
               <div className="about-tags">
-                {['🦐 Carcinology','🔬 Species Taxonomy','📖 Science Writing','🐚 Biodiversity','🧪 Molecular Ecology'].map(t => (
+                {['🦐 Atyidae & Palaemonidae','🔬 Crustacean Taxonomy','🎓 Biological Oceanography','🌍 Climate Change Studies','🌊 Field Sampling'].map(t => (
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
-              <Link to="/about" className="btn-primary">Full Story →</Link>
+              <Link to="/about" className="btn-primary">View Full CV →</Link>
             </div>
             <div className="about-snap-visual" data-aos="fade-left">
               <div className="profile-photo-stack">
@@ -183,50 +178,50 @@ export default function Home() {
                     : <div className="avatar-fallback">KK</div>
                   }
                 </div>
-                <div className="profile-photo-badge top-badge">🦐 That Shrimply Amazing Girl!</div>
-                <div className="profile-photo-badge bottom-badge">🌊 Sathyabama Institute Lab</div>
+                <div className="profile-photo-badge top-badge">🎓 M.Sc. Marine Science</div>
+                <div className="profile-photo-badge bottom-badge">🌊 Research Assistant</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FEATURED WRITING & RESEARCH ── */}
+      {/* ── FEATURED RESEARCH & GRANTS ── */}
       <section className="featured-section">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">Featured Work</div>
-            <h2 className="section-title">Discovering Hidden Crustaceans</h2>
-            <p className="section-subtitle">Bridging rigorous taxonomy with accessible science communication</p>
+            <div className="section-tag">Key Projects</div>
+            <h2 className="section-title">Conservation in the Western Ghats</h2>
+            <p className="section-subtitle">Evaluating the impact of ornamental trade on endemic freshwater species</p>
           </div>
           <div className="writing-grid">
             <article className="writing-card featured-card" data-aos="fade-up">
-              <div className="article-category">🔬 Taxonomy & Discovery</div>
-              <h3>Rediscovery of the genus Atyopsis (Decapoda: Atyidae) in India</h3>
-              <p>Following a 72-year gap, we rediscovered the genus Atyopsis in mainland India. This major taxonomic finding expands our understanding of freshwater shrimp distribution and highlights the importance of continued biodiversity surveys in aquatic ecosystems.</p>
+              <div className="article-category">🔬 Rufford Foundation Grant</div>
+              <h3>Assessing the Conservation Priority of Freshwater Ornamental Shrimps (Family: Atyidae and Palaemonidae)</h3>
+              <p>Backed by the 1st Rufford Small Grant (£5,947), this ongoing field research project targets the Central Western Ghats. We utilize intensive field surveys and biodiversity assessments to map vulnerable shrimp populations, bridging localized taxonomy with global conservation priorities.</p>
               <div className="article-meta">
-                <span className="meta-tag">Zootaxa Journal</span>
-                <span className="meta-tag">2025</span>
+                <span className="meta-tag">The Rufford Foundation, London</span>
+                <span className="meta-tag">Status: Completed</span>
               </div>
-              <Link to="/research" className="article-link">View Publication <span>→</span></Link>
+              <Link to="/research" className="article-link">View All Grants <span>→</span></Link>
             </article>
             <div className="writing-side">
               {[
-                { cat:'🦐 Carcinology', h:'Review of Caridina Freshwater Shrimps', p:'Analyzing research trends and identifying critical gaps in the biology of Caridina shrimps globally.' },
-                { cat:'🔍 Taxonomy', h:'Macrobrachium irwini sp. nov.', p:'The discovery and formal description of a completely new species of freshwater shrimp from the Western Ghats.' },
-                { cat:'🪸 Marine Ecology', h:'Dendronephthya corals & associated crustaceans', p:'Documenting new coral species and their intricate symbiotic relationships with crustaceans in Chennai.' },
+                { cat:'🦐 ATBC Seed Grant', h:'Freshwater Shrimps of Western Ghats', p:'Secondary research focusing heavily on Family Atyidae and Palaemonidae in central Indian regions ($1000).' },
+                { cat:'🏆 APJ Abdul Kalam Fellowship', h:'Diversity & Aquarium Trade', p:'Investigating the conservation impact of the ornamental aquarium trade on specific Atyidae populations in Karnataka (₹25,000).' },
+                { cat:'🔍 Major Publication', h:'Rediscovery of Atyopsis', p:'Co-authored the formal rediscovery of the Atyopsis genus in mainland India after 72 years.' },
               ].map((item, i) => (
                 <article key={item.h} className="writing-card-small" data-aos="fade-up" data-aos-delay={String(i*100)}>
                   <div className="article-category">{item.cat}</div>
                   <h4>{item.h}</h4>
                   <p>{item.p}</p>
-                  <Link to="/research" className="small-link">View Research →</Link>
+                  <Link to="/research" className="small-link">View Details →</Link>
                 </article>
               ))}
             </div>
           </div>
           <div className="section-cta" data-aos="fade-up">
-            <Link to="/research" className="btn-outline">View All Publications</Link>
+            <Link to="/research" className="btn-outline">View Full Bibliography</Link>
           </div>
         </div>
       </section>
@@ -235,17 +230,17 @@ export default function Home() {
       <section className="topics-section">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">Explore</div>
-            <h2 className="section-title">What Sparks My Curiosity</h2>
+            <div className="section-tag">Research Disciplines</div>
+            <h2 className="section-title">Core Scientific Expertise</h2>
           </div>
           <div className="topics-grid">
             {[
-              { e:'🦐', h:'Carcinology', p:'Extensive taxonomic and morphological study of both freshwater and marine crustaceans.' },
-              { e:'🔬', h:'Molecular Ecology', p:'Utilizing genetic tools alongside morphology to precisely identify and map crustacean lineages.' },
-              { e:'🪸', h:'Benthic Ecosystems', p:'Studying the life lurking at the bottom of aquatic bodies — from crabs to elusive shrimp species.' },
-              { e:'📢', h:'Science Communication', p:'Translating jargon-rich science into accessible, emotionally resonant stories on Substack.' },
-              { e:'🌊', h:'Biodiversity Surveys', p:'Conducting field surveys along the Indian coast and Western Ghats to monitor species health.' },
-              { e:'🧪', h:'Academic Collaboration', p:'Working within Dr. Amit Kumar\'s lab to tackle broad interdisciplinary challenges in marine ecology.' },
+              { e:'🦐', h:'Carcinology & Taxonomy', p:'Identification, description, and classification of freshwater and marine decapod crustaceans.' },
+              { e:'🔬', h:'Biological Oceanography', p:'Extensive academic background from Goa University studying living marine resources and physical-biological interactions.' },
+              { e:'🌍', h:'Climate Change Studies', p:'Assessing the vulnerability of marine populations (like coral arrays and benthic zones) to warming waters and acidification.' },
+              { e:'📢', h:'Outreach & Ecosystem Dev', p:'Mentoring interns and organizing symposiums ranging from DNA Taxonomy courses to World Mosquito Day.' },
+              { e:'🌊', h:'Field Survey Operations', p:'Extensive background conducting intensive coastal and riverine sampling trips in South India.' },
+              { e:'🧪', h:'Molecular Ecology', p:'Applying advanced genetics (including Flow Cytometry) alongside Dr. Amit Kumar to map lineages.' },
             ].map((t, i) => (
               <div key={t.h} className="topic-card" data-aos="zoom-in" data-aos-delay={String(i*100)}>
                 <div className="topic-emoji">{t.e}</div>
@@ -263,15 +258,15 @@ export default function Home() {
           <div className="connect-card" data-aos="fade-up">
             <div className="connect-inner">
               <div className="connect-text">
-                <h2>Let's Discover Together</h2>
-                <p>Follow along as I uncover new species and dive deeper into the world of carcinology and storytelling.</p>
+                <h2>Collaborate & Connect</h2>
+                <p>Always open to sharing datasets, academic collaborations, and expanding marine ecology initiatives globally.</p>
               </div>
               <div className="social-links">
                 {[
                   { icon:'𝕏', name:'X (Twitter)', handle:'@KKunjulakshmi', href:'https://x.com/KKunjulakshmi' },
                   { icon:'in', name:'LinkedIn', handle:'Kunjulakshmi K', href:'https://www.linkedin.com/in/kunjulakshmi-k-3221b423a' },
                   { icon:'⊜', name:'ORCID', handle:'0000-0001-9003-0972', href:'https://orcid.org/0000-0001-9003-0972' },
-                  { icon:'✍', name:'Substack', handle:'The Curiosity Quotient', href:'https://thecuriosityquotient.substack.com' },
+                  { icon:'✉️', name:'Email', handle:'Oceanography2021@gmail.com', href:'mailto:oceanography2021@gmail.com' },
                 ].map(s => (
                   <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="social-link">
                     <div className="social-icon">{s.icon}</div>

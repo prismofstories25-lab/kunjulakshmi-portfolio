@@ -7,7 +7,6 @@ const CHANNELS = [
   { icon:'𝕏', name:'X (Twitter)', handle:'@KKunjulakshmi', href:'https://x.com/KKunjulakshmi' },
   { icon:'in', name:'LinkedIn', handle:'Kunjulakshmi K', href:'https://www.linkedin.com/in/kunjulakshmi-k-3221b423a' },
   { icon:'⊜', name:'ORCID', handle:'0000-0001-9003-0972', href:'https://orcid.org/0000-0001-9003-0972' },
-  { icon:'✍', name:'Substack', handle:'The Curiosity Quotient', href:'https://thecuriosityquotient.substack.com' },
 ]
 
 export default function Contact() {
@@ -29,7 +28,7 @@ export default function Contact() {
         <div className="container">
           <div className="section-tag">Connect</div>
           <h1>Let's Dive In Together</h1>
-          <p>Open to collaborations, conversations, and curiosity-driven connections.</p>
+          <p>Open to collaborations, academic discussions, and research connections.</p>
         </div>
       </div>
 
@@ -38,7 +37,16 @@ export default function Contact() {
           <div className="contact-grid">
             <div className="contact-info" data-aos="fade-right">
               <h2 className="section-title">Say Hello <em>🌊</em></h2>
-              <p>Whether you're a fellow science communicator, researcher, event organizer, or simply curious about the ocean — I'd love to connect. Let's explore ideas, collaborate on projects, or just geek out about electric rays.</p>
+              <p>Whether you're a fellow marine researcher, event organizer, or simply curious about crustacean taxonomy — I'd love to connect. Let's collaborate on projects or discuss field surveys.</p>
+              
+              <div style={{display:'flex', alignItems:'center', gap:'16px', background:'rgba(255,255,255,0.04)', padding:'16px 20px', borderRadius:'16px', marginBottom:'24px'}}>
+                  <div style={{fontSize:'1.5rem'}}>✉️</div>
+                  <div>
+                     <div style={{fontSize:'0.85rem', color:'#8ab4c8', fontWeight:600}}>Email Me At</div>
+                     <a href="mailto:Oceanography2021@gmail.com" style={{color:'#e0f2fe', fontWeight:600}}>Oceanography2021@gmail.com</a>
+                  </div>
+              </div>
+
               <div className="contact-channels">
                 {CHANNELS.map(c => (
                   <a key={c.href} href={c.href} target="_blank" rel="noopener noreferrer" className="channel-card">
@@ -53,7 +61,7 @@ export default function Contact() {
               </div>
               <div className="availability-badge">
                 <div className="avail-dot" />
-                <span>Open to collaborations &amp; science communication projects</span>
+                <span>Open to academic collaborations &amp; science outreach projects</span>
               </div>
             </div>
 
@@ -74,10 +82,10 @@ export default function Contact() {
                     <label htmlFor="subject">Subject</label>
                     <select id="subject">
                       <option value="">Select a topic...</option>
-                      <option>Collaboration Opportunity</option>
-                      <option>Science Discussion</option>
-                      <option>Event / Speaking</option>
-                      <option>Media / Press</option>
+                      <option>Research Collaboration</option>
+                      <option>Conference / Workshop</option>
+                      <option>Grant Discussion</option>
+                      <option>Science Outreach</option>
                       <option>Just Saying Hello</option>
                     </select>
                   </div>
@@ -94,23 +102,49 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Professional References */}
       <section className="collab-section">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">Open To</div>
-            <h2 className="section-title">How We Can Work Together</h2>
+            <div className="section-tag">Academic Network</div>
+            <h2 className="section-title">Professional References</h2>
           </div>
-          <div className="collab-grid">
+          <div className="collab-grid" style={{gridTemplateColumns: '1fr 1fr 1fr'}}>
             {[
-              { e:'🖊️', h:'Science Writing', p:'Articles, essays, and science reports for publications, events, or institutions.' },
-              { e:'🎤', h:'Event Coverage', p:'Live reporting and post-event write-ups for science lectures and symposia.' },
-              { e:'🔬', h:'Research Communication', p:'Translating scientific papers and findings into public-facing content.' },
-              { e:'🌐', h:'Online Communities', p:'Building and engaging science communities through social media and newsletters.' },
-            ].map((c,i) => (
-              <div key={c.h} className="collab-card" data-aos="zoom-in" data-aos-delay={String(i*100)}>
-                <div className="collab-icon">{c.e}</div>
-                <h4>{c.h}</h4>
-                <p>{c.p}</p>
+              {
+                name: 'Dr. S. Prakash',
+                role: 'Associate Professor and Head',
+                loc: 'Centre for Climate Change Studies, Sathyabama Institute of Science and Technology, Chennai',
+                email: 'prakash.cccs@sathyabama.ac.in',
+                phone: '9498380513'
+              },
+              {
+                name: 'Dr. K. Sivakumar',
+                role: 'Professor',
+                loc: 'Department of Environment and Ecology, Pondicherry University',
+                email: 'ksivakumar@pondiuni.ac.in',
+                phone: '9412058129'
+              },
+              {
+                name: 'Dr. K. A. Subramanian',
+                role: 'Scientist E and Officer In-charge',
+                loc: 'Southern Regional Centre, Zoological Survey of India, Chennai',
+                email: 'subbu.ka@zsi.gov.in',
+                phone: '9088039540'
+              }
+            ].map((ref, idx) => (
+              <div key={idx} className="collab-card" data-aos="zoom-in" data-aos-delay={String(idx*100)} style={{textAlign: 'left', padding: '32px'}}>
+                <h4 style={{fontSize: '1.2rem', marginBottom: '4px'}}>{ref.name}</h4>
+                <p style={{color: '#06b6d4', fontWeight: 600, fontSize: '0.85rem', marginBottom: '16px'}}>{ref.role}</p>
+                <p style={{fontSize: '0.9rem', marginBottom: '24px'}}>{ref.loc}</p>
+                <div style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
+                  <a href={`mailto:${ref.email}`} style={{fontSize: '0.85rem', color: '#e0f2fe', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                    <span>✉️</span> {ref.email}
+                  </a>
+                  <a href={`tel:+91${ref.phone}`} style={{fontSize: '0.85rem', color: '#e0f2fe', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                    <span>📞</span> +91 {ref.phone}
+                  </a>
+                </div>
               </div>
             ))}
           </div>

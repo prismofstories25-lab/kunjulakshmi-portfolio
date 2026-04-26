@@ -1,0 +1,32 @@
+/* Outreach Page */
+.pub-banner { padding:60px 0; background:#050d1a; }
+.pub-card { background:linear-gradient(135deg,rgba(6,182,212,0.08),rgba(0,114,198,0.05)); border:1px solid rgba(6,182,212,0.2); border-radius:40px; padding:48px; display:grid; grid-template-columns:auto 1fr auto; gap:40px; align-items:center; }
+.pub-icon { font-size:3.5rem; }
+.pub-info h3 { font-family:'Lora',serif; font-size:1.8rem; font-weight:700; margin-bottom:8px; }
+.pub-info p { color:#8ab4c8; }
+
+.articles-section { padding:80px 0; background:#0b2545; }
+
+.events-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
+.event-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px; transition:all 0.3s ease; }
+.event-card:hover { border-color:#06b6d4; background:rgba(6,182,212,0.05); transform:translateY(-3px); }
+.event-date { font-size:0.8rem; color:#38bdf8; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:10px; }
+.event-card h4 { font-size:1.05rem; line-height:1.4; color:#e0f2fe; }
+
+.conf-list { display:flex; flex-direction:column; gap:16px; }
+.conf-card { background:rgba(255,255,255,0.02); border-left:4px solid #06b6d4; padding:24px 32px; border-radius:0 16px 16px 0; display:flex; align-items:center; gap:24px; transition:0.3s; }
+.conf-card:hover { background:rgba(255,255,255,0.06); }
+.conf-type { font-size:0.8rem; font-weight:700; color:#06b6d4; text-transform:uppercase; letter-spacing:0.05em; min-width:100px; }
+.conf-main { flex:1; }
+.conf-main h3 { font-size:1.15rem; margin-bottom:6px; color:#e0f2fe; }
+.conf-main p { font-size:0.9rem; color:#8ab4c8; margin:0; }
+.conf-year { font-size:1.5rem; font-weight:800; color:rgba(255,255,255,0.1); }
+
+@media(max-width:1024px){
+  .pub-card { grid-template-columns:1fr; gap:24px; }
+}
+@media(max-width:768px){
+  .conf-card { flex-direction:column; align-items:flex-start; gap:12px; }
+  .conf-type { min-width:auto; }
+  .conf-year { display:none; }
+}

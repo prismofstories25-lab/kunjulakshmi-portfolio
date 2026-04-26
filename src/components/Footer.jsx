@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/writing', label: 'Writing' },
-  { to: '/research', label: 'Research' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/about', label: 'About & Education' },
+  { to: '/research', label: 'Research & Grants' },
+  { to: '/outreach', label: 'Outreach & Events' },
+  { to: '/contact', label: 'Contact & References' },
 ]
 
 const SOCIAL = [
@@ -25,8 +25,8 @@ export default function Footer() {
               <span className="logo-text">Kunjulakshmi </span>
               <span className="logo-accent">K.</span>
             </NavLink>
-            <p>Science communicator. Marine ecology enthusiast. Storyteller.</p>
-            <p className="footer-tagline">"That Shrimply Amazing Girl!"</p>
+            <p>Research Scholar · Center for Climate Change Studies · Sathyabama Institute</p>
+            <p className="footer-tagline">Marine Ecology & Taxonomy</p>
           </div>
           <div className="footer-links">
             <h4>Navigation</h4>

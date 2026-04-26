@@ -16,8 +16,8 @@ export default function About() {
         <div className="orb-bg orb-1"/><div className="orb-bg orb-2"/>
         <div className="container">
           <div className="section-tag">About Me</div>
-          <h1>Beyond the Microscope:<br/>The <em>Curiosity</em> of a Carcinologist</h1>
-          <p>Science communicator and taxonomy researcher exploring the unseen dimensions of crustacean life.</p>
+          <h1>Academic Integrity &amp;<br/><em>Field Discoveries</em></h1>
+          <p>M.Sc. Biological Oceanography | Research Scholar | Award-Winning Taxonomist</p>
         </div>
       </div>
 
@@ -35,15 +35,15 @@ export default function About() {
                     : <span className="avatar-initials">KK</span>
                   }
                 </div>
-                <div className="avatar-badge b1">🦐 Carcinology</div>
-                <div className="avatar-badge b2">🔬 Taxonomy</div>
-                <div className="avatar-badge b3">📝 TCQ Writer</div>
+                <div className="avatar-badge b1">🎓 M.Sc. Goa University</div>
+                <div className="avatar-badge b2">🔬 Rufford Grantee</div>
+                <div className="avatar-badge b3">🏆 TIFR Awardee</div>
               </div>
               <div className="about-socials">
                 {[
-                  { href:'https://x.com/KKunjulakshmi', label:'𝕏 @KKunjulakshmi' },
+                  { href:'mailto:oceanography2021@gmail.com', label:'✉️ Oceanography2021@gmail.com' },
                   { href:'https://orcid.org/0000-0001-9003-0972', label:'ORCID Profile' },
-                  { href:'https://thecuriosityquotient.substack.com', label:'The Curiosity Quotient' },
+                  { href:'tel:+919767386585', label:'📞 +91 9767386585' },
                 ].map(s => (
                   <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="social-pill">{s.label}</a>
                 ))}
@@ -51,12 +51,12 @@ export default function About() {
             </div>
 
             <div className="about-text-col" data-aos="fade-left">
-              <div className="section-tag">My Story</div>
-              <h2 className="section-title">"That <em>Shrimply Amazing</em> Girl!"</h2>
-              <p>Hello! I'm <strong>Kunjulakshmi K</strong> — a passionate marine researcher and carcinologist working in Dr. Amit Kumar's Marine Biology Lab at the Sathyabama Institute of Science and Technology.</p>
-              <p>My academic core is heavily rooted in taxonomy and molecular ecology. Most of my days are spent examining the intricate morphology of crustaceans (shrimps, crabs) and working to accurately classify marine and freshwater biodiversity. I've had the thrill of discovering completely new species to science, like the <em>Macrobrachium irwini</em> from the Western Ghats, and documenting the rediscovery of the genus <em>Atyopsis</em> in mainland India after a 72-year gap!</p>
-              <p>Alongside my formal lab work, my journey is driven by a deep conviction: <em>science is most impactful when it can be felt, not just understood.</em> Through <strong>The Curiosity Quotient</strong> on Substack, I translate the rigid, jargon-dense world of academia into narratives that spark genuine curiosity and inspire community-driven wonder.</p>
-              <p>Whether I'm staring through a microscope at a shrimp's rostrum or writing about coastal ecosystems, my goal remains the same: revealing the profound beauty of aquatic life.</p>
+              <div className="section-tag">Educational Story</div>
+              <h2 className="section-title">A Foundation in <em>Excellence</em></h2>
+              <p>I am Kunjulakshmi K, currently serving as a <strong>Research Assistant</strong> at the Centre for Climate Change Studies, Sathyabama Institute of Science and Technology in Chennai, Tamil Nadu.</p>
+              <p>My academic foundation was built at The Cochin College (Mahatma Gandhi University), where I earned my B.Sc. in Zoology. I then specialized heavily in marine studies, earning an <strong>M.Sc. in Marine Science (Biological Oceanography)</strong> from Goa University with a high CGPA of 8.55.</p>
+              <p>Currently, my responsibilities encompass conducting rigorous field surveys along the Indian coast and Western Ghats, executing biodiversity assessments, and participating directly in grant-funded research. I have successfully secured highly competitive funding from the <strong>Rufford Foundation</strong> and the <strong>Association for Tropical Biology and Conservation (ATBC)</strong> for my work mapping and cataloging freshwater ornamental shrimps (Atyidae and Palaemonidae).</p>
+              <p>Beyond publishing papers on new taxonomy, I actively mentor undergraduate interns and coordinate large-scale training sessions on field sampling and advanced laboratory methodologies.</p>
             </div>
           </div>
         </div>
@@ -66,15 +66,15 @@ export default function About() {
       <section className="about-pillars">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">What Drives Me</div>
-            <h2 className="section-title">My Core Pillars</h2>
+            <div className="section-tag">Key Competencies</div>
+            <h2 className="section-title">Academic Achievements</h2>
           </div>
           <div className="pillars-grid">
             {[
-              { icon:'🔬', h:'Taxonomic Accuracy', p:'Thorough morphological and molecular examination to correctly identify, describe, and classify complex crustacean species.' },
-              { icon:'📢', h:'Science Access', p:'Science should never feel exclusive. I work to make marine knowledge accessible to everyone, removing jargon and building bridges.' },
-              { icon:'🌊', h:'Field to Lab', p:'Bridging the gap between active field surveys in locations like the Western Ghats to rigorous laboratory analysis in Chennai.' },
-              { icon:'✍️', h:'Thoughtful Writing', p:'Every piece I write makes you feel something before you think something — because emotion is the gateway to lasting understanding.' },
+              { icon:'🏅', h:'Veronica Rodrigues Award', p:'Awarded in 2019 for perseverance in the pursuit of Science at the Tata Institute of Fundamental Research (TIFR), Mumbai.' },
+              { icon:'🔬', h:'K S Krishnan Fellow', p:'Received the K S Krishnan Student Research Fellow Award (2017) for contributing to Collaborative Undergraduate Biological Education.' },
+              { icon:'📚', h:'Professional Grants', p:'Recipient of the Rufford Small Grant, ATBC Seed Grant, and Dr. A.P.J Abdul Kalam Young Research Fellowship.' },
+              { icon:'🌍', h:'International Memberships', p:'Active member of The Crustacean Society (2026), ASLO, Society for the Study of Evolution, and The Systematics Association (UK).' },
             ].map((p, i) => (
               <div key={p.h} className="pillar-card" data-aos="fade-up" data-aos-delay={String(i*100)}>
                 <div className="pillar-icon">{p.icon}</div>
@@ -90,16 +90,15 @@ export default function About() {
       <section className="about-journey">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">Journey</div>
-            <h2 className="section-title">Chapters of Discovery</h2>
+            <div className="section-tag">Education & Experience</div>
+            <h2 className="section-title">Academic Trajectory</h2>
           </div>
           <div className="timeline">
             {[
-              { date:'October 2022', h:'First Major Species Discovery', p:'Published the formal description of Macrobrachium irwini sp. nov., a completely new freshwater shrimp species discovered in the Western Ghats (Zootaxa).', right:false },
-              { date:'July 2023', h:'Advancing Anthozoan Ecology', p:'Co-authored research on a new species of the Dendronephthya genus and its associated crustaceans in Chennai.', right:true },
-              { date:'The Curiosity Quotient', h:'Substack Writing', p:'Began actively translating the marine ecology world into accessible essays, stories, and event coverage for the public.', right:false },
-              { date:'April 2025', h:'Global Review of Caridina', p:'Published a comprehensive review mapping the research trends and gaps in the biology of freshwater shrimps of the genus Caridina globally.', right:true },
-              { date:'November 2025', h:'A 72-Year Rediscovery', p:'Confirmed and documented the rediscovery of the Atyopsis shrimp genus in mainland India, closing a seven-decade taxonomic gap.', right:false, current:true },
+              { date:'2016 – 2019', h:'B.Sc. in Zoology', p:'Graduated with highly commendable marks (7.68 CGPA) from The Cochin College, Mahatma Gandhi University, Kerala.', right:false },
+              { date:'2017 & 2019', h:'TIFR Awards & Research', p:'Mentored at the Tata Institute of Fundamental Research (TIFR). Received the KS Krishnan Fellowship and the Veronica Rodrigues Award for academic excellence.', right:true },
+              { date:'2019 – 2021', h:'M.Sc. in Biological Oceanography', p:'Earned Master\'s degree from the School of Earth, Ocean and Atmospheric Sciences, Goa University, achieving a CGPA of 8.55.', right:false },
+              { date:'December 2021 – Present', h:'Research Assistant Role', p:'Joined the Centre for Climate Change Studies, Sathyabama Institute. Responsible for major field surveys, proposal writing, and mentoring.', right:true, current:true },
             ].map((item, i) => (
               <div key={i} className={`timeline-item${item.right?' right':''}`} data-aos={item.right?'fade-left':'fade-right'}>
                 <div className={`timeline-dot${item.current?' dot-current':''}`}/>
@@ -119,12 +118,12 @@ export default function About() {
         <div className="container">
           <div className="facts-grid">
             {[
-              { e:'🦐', t:'Self-described as "That Shrimply Amazing Girl!" — proudly' },
-              { e:'🔬', t:"Can spend hours debating tiny morphological traits under a scope" },
-              { e:'🌊', t:'Thrives in the field gathering samples across India’s aquatic systems' },
-              { e:'✍️', t:'Loves unpacking academic papers into fun, readable stories' },
-              { e:'🧠', t:'Combines molecular ecology with traditional physical taxonomy' },
-              { e:'🧪', t:'Proud member of Dr. Amit Kumar’s Marine Biology Lab in Chennai' },
+              { e:'🌍', t:'Member of the Society for the Study of Evolution (SSE)' },
+              { e:'🧪', t:"Interned on the unexplored mangrove ecosystems of Goa (2021)" },
+              { e:'🦠', t:'Completed INDO-US Flow Cytometry workshop in Bio-oceanography' },
+              { e:'🎓', t:'Volunteered for ATBC2023 with specific fee-waiver achievements' },
+              { e:'🔬', t:'Trained on the assembly and use of Fold Scope by Gov of India' },
+              { e:'DNA', t:'Organizes high-level symposia on Integrative Marine Taxonomy' },
             ].map(f => (
               <div key={f.t} className="fact-card" data-aos="zoom-in">
                 <div className="fact-emoji">{f.e}</div>

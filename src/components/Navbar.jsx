@@ -26,8 +26,8 @@ export default function Navbar() {
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
           <NavLink to="/" className={({isActive})=>`nav-link${isActive?' active':''}`} end>Home</NavLink>
           <NavLink to="/about" className={({isActive})=>`nav-link${isActive?' active':''}`}>About</NavLink>
-          <NavLink to="/writing" className={({isActive})=>`nav-link${isActive?' active':''}`}>Writing</NavLink>
           <NavLink to="/research" className={({isActive})=>`nav-link${isActive?' active':''}`}>Research</NavLink>
+          <NavLink to="/outreach" className={({isActive})=>`nav-link${isActive?' active':''}`}>Outreach</NavLink>
           <NavLink to="/contact" className={({isActive})=>`nav-link nav-cta${isActive?' active':''}`}>Connect</NavLink>
         </div>
 
