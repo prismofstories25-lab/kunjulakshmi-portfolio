@@ -35,11 +35,11 @@ export default function MarineBackground() {
       Object.assign(w.style, {
         position: 'absolute',
         width: '60px',
-        left: \`\${Math.random() * 90 + 5}%\`,
-        top: \`\${Math.random() * 80 + 5}%\`,
+        left: `${Math.random() * 90 + 5}%`,
+        top: `${Math.random() * 80 + 5}%`,
         opacity: String(0.08 + Math.random() * 0.12),
-        animation: \`shrimpSwim \${8 + Math.random() * 10}s ease-in-out infinite\`,
-        animationDelay: \`\${Math.random() * 8}s\`,
+        animation: `shrimpSwim ${8 + Math.random() * 10}s ease-in-out infinite`,
+        animationDelay: `${Math.random() * 8}s`,
         pointerEvents: 'none',
         filter: 'drop-shadow(0 0 4px rgba(6,182,212,0.3))',
       })
@@ -53,11 +53,11 @@ export default function MarineBackground() {
       Object.assign(w.style, {
         position: 'absolute',
         width: '50px',
-        left: \`\${Math.random() * 85 + 5}%\`,
-        top: \`\${Math.random() * 85 + 5}%\`,
+        left: `${Math.random() * 85 + 5}%`,
+        top: `${Math.random() * 85 + 5}%`,
         opacity: String(0.06 + Math.random() * 0.1),
-        animation: \`rayGlide \${14 + Math.random() * 12}s ease-in-out infinite\`,
-        animationDelay: \`\${Math.random() * 10}s\`,
+        animation: `rayGlide ${14 + Math.random() * 12}s ease-in-out infinite`,
+        animationDelay: `${Math.random() * 10}s`,
         pointerEvents: 'none',
         filter: 'drop-shadow(0 0 8px rgba(6,182,212,0.2))',
       })
@@ -70,12 +70,12 @@ export default function MarineBackground() {
       const size = 2 + Math.random() * 3
       Object.assign(p.style, {
         position: 'absolute',
-        width: \`\${size}px\`, height: \`\${size}px\`,
+        width: `${size}px`, height: `${size}px`,
         background: '#06b6d4', borderRadius: '50%',
-        left: \`\${Math.random() * 100}%\`,
+        left: `${Math.random() * 100}%`,
         opacity: '0',
-        animation: \`particleFloat \${8 + Math.random() * 15}s linear infinite\`,
-        animationDelay: \`\${Math.random() * 10}s\`,
+        animation: `particleFloat ${8 + Math.random() * 15}s linear infinite`,
+        animationDelay: `${Math.random() * 10}s`,
         pointerEvents: 'none',
       })
       el.appendChild(p)
@@ -85,15 +85,15 @@ export default function MarineBackground() {
     for (let i = 0; i < 10; i++) {
       const b = document.createElement('div')
       const size = 10 + Math.random() * 18
-      b.innerHTML = \`<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="rgba(255,255,255,0.15)"/></svg>\`
+      b.innerHTML = `<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="rgba(255,255,255,0.15)"/></svg>`
       Object.assign(b.style, {
         position: 'absolute',
-        width: \`\${size}px\`,
-        left: \`\${Math.random() * 100}%\`,
-        bottom: \`\${Math.random() * 30}%\`,
+        width: `${size}px`,
+        left: `${Math.random() * 100}%`,
+        bottom: `${Math.random() * 30}%`,
         opacity: '0',
-        animation: \`bubbleRise \${6 + Math.random() * 8}s ease-in infinite\`,
-        animationDelay: \`\${Math.random() * 12}s\`,
+        animation: `bubbleRise ${6 + Math.random() * 8}s ease-in infinite`,
+        animationDelay: `${Math.random() * 12}s`,
         pointerEvents: 'none',
       })
       el.appendChild(b)
