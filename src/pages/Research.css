@@ -18,6 +18,16 @@
 .research-card p { font-size:0.88rem; color:#8ab4c8; line-height:1.6; margin-bottom:14px; }
 .rc-tags { display:flex; flex-wrap:wrap; gap:8px; }
 
+/* Timeline Publications */
+.pub-timeline { display:flex; flex-direction:column; gap:24px; }
+.pub-card-wide { display:block; width:100%; text-align:left; padding:32px 40px; }
+.rc-journal { font-size:0.85rem; font-weight:600; color:#06b6d4; text-transform:uppercase; margin-bottom:12px; letter-spacing:0.05em; }
+.pub-card-wide h3 { font-family:'Lora',serif; font-size:1.3rem; margin-bottom:16px; line-height:1.4; color:#e0f2fe; }
+.pub-links { padding-top:16px; border-top:1px solid rgba(255,255,255,0.06); }
+.doi-link { font-size:0.9rem; color:#38bdf8; transition:color 0.3s; word-break:break-all; }
+.doi-link:hover { color:#00e4ff; text-decoration:none; }
+.doi-link strong { color:#8ab4c8; margin-right:6px; }
+
 .spotlight-section { padding:100px 0; background:#050d1a; }
 .spotlight-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .spotlight-facts h3 { font-family:'Lora',serif; font-size:1.4rem; font-weight:700; margin-bottom:24px; }
@@ -51,6 +61,10 @@
   .spotlight-grid { grid-template-columns:1fr; }
   .orcid-card { grid-template-columns:1fr; }
   .linkedin-card { flex-direction:column; text-align:center; }
+}
+@media(max-width:768px){
+  .pub-card-wide { padding:24px; }
+  .pub-card-wide h3 { font-size:1.15rem; }
 }
 @media(max-width:600px){
   .research-grid { grid-template-columns:1fr; }

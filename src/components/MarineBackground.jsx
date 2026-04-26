@@ -10,13 +10,14 @@ const SHRIMP_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" 
   <circle cx="57" cy="14" r="1" fill="#0ea5e9" opacity="0.9"/>
 </svg>`
 
-const RAY_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" fill="none">
-  <path d="M50 15 Q70 0 90 20 Q80 25 50 30 Q20 25 10 20 Q30 0 50 15Z" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
-  <path d="M50 30 Q52 40 55 55 Q51 52 50 58 Q49 52 45 55 Q48 40 50 30Z" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1.2" opacity="0.6"/>
-  <ellipse cx="50" cy="20" rx="12" ry="8" fill="rgba(56,189,248,0.1)" opacity="0.5"/>
-  <circle cx="44" cy="17" r="2" fill="rgba(56,189,248,0.5)" opacity="0.8"/>
-  <circle cx="56" cy="17" r="2" fill="rgba(56,189,248,0.5)" opacity="0.8"/>
-  <path d="M50 20 Q52 22 54 20" stroke="#38bdf8" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+const CRAB_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" fill="none">
+  <ellipse cx="30" cy="20" rx="14" ry="10" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+  <path d="M16 20 Q10 15 5 20" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M44 20 Q50 15 55 20" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M22 12 Q15 5 20 5 M38 12 Q45 5 40 5" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="20" cy="5" r="1.5" fill="#0ea5e9"/>
+  <circle cx="40" cy="5" r="1.5" fill="#0ea5e9"/>
+  <path d="M20 28 Q15 35 25 35 M40 28 Q45 35 35 35" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
 </svg>`
 
 export default function MarineBackground() {
@@ -34,29 +35,29 @@ export default function MarineBackground() {
       Object.assign(w.style, {
         position: 'absolute',
         width: '60px',
-        left: `${Math.random() * 90 + 5}%`,
-        top: `${Math.random() * 80 + 5}%`,
+        left: \`\${Math.random() * 90 + 5}%\`,
+        top: \`\${Math.random() * 80 + 5}%\`,
         opacity: String(0.08 + Math.random() * 0.12),
-        animation: `shrimpSwim ${8 + Math.random() * 10}s ease-in-out infinite`,
-        animationDelay: `${Math.random() * 8}s`,
+        animation: \`shrimpSwim \${8 + Math.random() * 10}s ease-in-out infinite\`,
+        animationDelay: \`\${Math.random() * 8}s\`,
         pointerEvents: 'none',
         filter: 'drop-shadow(0 0 4px rgba(6,182,212,0.3))',
       })
       el.appendChild(w)
     }
 
-    // Stingrays
-    for (let i = 0; i < 3; i++) {
+    // Crabs
+    for (let i = 0; i < 4; i++) {
       const w = document.createElement('div')
-      w.innerHTML = RAY_SVG
+      w.innerHTML = CRAB_SVG
       Object.assign(w.style, {
         position: 'absolute',
-        width: '100px',
-        left: `${Math.random() * 85 + 5}%`,
-        top: `${Math.random() * 75 + 5}%`,
+        width: '50px',
+        left: \`\${Math.random() * 85 + 5}%\`,
+        top: \`\${Math.random() * 85 + 5}%\`,
         opacity: String(0.06 + Math.random() * 0.1),
-        animation: `rayGlide ${14 + Math.random() * 12}s ease-in-out infinite`,
-        animationDelay: `${Math.random() * 10}s`,
+        animation: \`rayGlide \${14 + Math.random() * 12}s ease-in-out infinite\`,
+        animationDelay: \`\${Math.random() * 10}s\`,
         pointerEvents: 'none',
         filter: 'drop-shadow(0 0 8px rgba(6,182,212,0.2))',
       })
@@ -69,12 +70,12 @@ export default function MarineBackground() {
       const size = 2 + Math.random() * 3
       Object.assign(p.style, {
         position: 'absolute',
-        width: `${size}px`, height: `${size}px`,
+        width: \`\${size}px\`, height: \`\${size}px\`,
         background: '#06b6d4', borderRadius: '50%',
-        left: `${Math.random() * 100}%`,
+        left: \`\${Math.random() * 100}%\`,
         opacity: '0',
-        animation: `particleFloat ${8 + Math.random() * 15}s linear infinite`,
-        animationDelay: `${Math.random() * 10}s`,
+        animation: \`particleFloat \${8 + Math.random() * 15}s linear infinite\`,
+        animationDelay: \`\${Math.random() * 10}s\`,
         pointerEvents: 'none',
       })
       el.appendChild(p)
@@ -84,15 +85,15 @@ export default function MarineBackground() {
     for (let i = 0; i < 10; i++) {
       const b = document.createElement('div')
       const size = 10 + Math.random() * 18
-      b.innerHTML = `<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="rgba(255,255,255,0.15)"/></svg>`
+      b.innerHTML = \`<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="rgba(255,255,255,0.15)"/></svg>\`
       Object.assign(b.style, {
         position: 'absolute',
-        width: `${size}px`,
-        left: `${Math.random() * 100}%`,
-        bottom: `${Math.random() * 30}%`,
+        width: \`\${size}px\`,
+        left: \`\${Math.random() * 100}%\`,
+        bottom: \`\${Math.random() * 30}%\`,
         opacity: '0',
-        animation: `bubbleRise ${6 + Math.random() * 8}s ease-in infinite`,
-        animationDelay: `${Math.random() * 12}s`,
+        animation: \`bubbleRise \${6 + Math.random() * 8}s ease-in infinite\`,
+        animationDelay: \`\${Math.random() * 12}s\`,
         pointerEvents: 'none',
       })
       el.appendChild(b)

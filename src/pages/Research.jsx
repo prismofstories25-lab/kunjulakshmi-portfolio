@@ -2,22 +2,41 @@ import MarineBackground from '../components/MarineBackground'
 import useAOS from '../hooks/useAOS'
 import './Research.css'
 
-const RESEARCH_AREAS = [
-  { n:'01', e:'🌊', h:'Marine Biodiversity', p:"Study of species diversity within marine ecosystems, with emphasis on understudied benthic zone dwellers and their ecological roles.", tags:['Species Survey','Ecology'] },
-  { n:'02', e:'⚡', h:'Electric Ray Biology', p:"Exploration of Torpediniformes — electric rays that inhabit shallow Indian coastal waters — focusing on electrogenic anatomy and conservation.", tags:['Torpediniformes','Physiology'] },
-  { n:'03', e:'🪸', h:'Coral Reef Ecology', p:"Investigating the health, taxonomic diversity, and climate vulnerability of coral reef systems along India's rich coastal environments.", tags:['Reef Systems','Taxonomy'] },
-  { n:'04', e:'🌡️', h:'Climate Change Impact', p:"Examining how rising temperatures, acidification, and habitat degradation affect marine biodiversity and species survival.", tags:['Climate','Conservation'] },
-  { n:'05', e:'🎣', h:'Sustainable Fisheries', p:"Researching the impact of bycatch, artisanal fishing, and policy reform on declining ray populations along India's east coast.", tags:['Fisheries','Policy'] },
-  { n:'06', e:'📢', h:'Science Communication', p:"Bridging research and public understanding — translating technical marine science into accessible narratives.", tags:['Public Engagement','Writing'] },
+const PUBLICATIONS = [
+  { 
+    date: 'November 2025', journal: 'Zootaxa',
+    title: 'Rediscovery of the genus Atyopsis Chace, 1983 (Decapoda: Atyidae) in mainland India following a 72-year gap',
+    doi: '10.11646/zootaxa.5722.4.7', link: 'https://doi.org/10.11646/zootaxa.5722.4.7'
+  },
+  { 
+    date: 'April 2025', journal: 'Journal of Crustacean Biology',
+    title: 'Review of research trends and gaps in the biology of freshwater shrimps of the genus Caridina H. Milne Edwards, 1837 (Decapoda: Caridea: Atyidae)',
+    doi: '10.1093/jcbiol/ruaf023', link: 'https://doi.org/10.1093/jcbiol/ruaf023'
+  },
+  { 
+    date: 'January 2024', journal: 'Proceedings of the Marine Biology Research Symposium',
+    title: 'Diversity of Brackish Water Ornamental Shrimps of Coastal Karnataka',
+    doi: null, link: null
+  },
+  { 
+    date: 'July 2023', journal: 'Thalassas: An International Journal of Marine Sciences',
+    title: 'A New Species of the Genus Dendronephthya Kükenthal 1905 (Octocorallia: Alcyonacea: Nephtheidae) and Associated Crustaceans From Covelong, Chennai, India',
+    doi: '10.1007/s41208-023-00580-3', link: 'https://doi.org/10.1007/s41208-023-00580-3'
+  },
+  { 
+    date: 'October 2022', journal: 'Zootaxa',
+    title: 'Macrobrachium irwini sp. nov., a new species of freshwater shrimp from Western Ghats, India (Caridea: Palaemonidae)',
+    doi: '10.11646/zootaxa.5194.3.5', link: 'https://doi.org/10.11646/zootaxa.5194.3.5'
+  }
 ]
 
-const RAY_FACTS = [
-  { e:'⚡', strong:'200 Volts', s:'Maximum electric shock to stun prey or deter predators' },
-  { e:'🌊', strong:'Benthic Dwellers', s:"Found in shallow coastal waters along India's east coast" },
-  { e:'⚠️', strong:'Near Threatened', s:'Nearly half of all electric ray species at risk of extinction' },
-  { e:'🦈', strong:'Shark Relatives', s:'Closely related to sharks through evolutionary lineage' },
-  { e:'🐣', strong:'Slow Reproduction', s:'Slow reproductive cycles worsen their conservation outlook' },
-  { e:'🏛️', strong:'Studied in Chennai', s:'Research by Prof. Amit Kumar at Sathyabama Institute' },
+const SHRIMP_FACTS = [
+  { e:'🦐', strong:'High Biodiversity', s:'Carcinology focuses on incredibly diverse crustacean traits' },
+  { e:'🔍', strong:'Rediscoveries', s:"Atyopsis genus found again in mainland India after 72 years" },
+  { e:'🌟', strong:'New Species', s:'Describing previously unknown species like Macrobrachium irwini' },
+  { e:'🧬', strong:'Morphology + Genetics', s:'Combining microscopy with molecular ecology for accuracy' },
+  { e:'🌊', strong:'Ecosystem Indicators', s:'Shrimp populations heavily indicate freshwater/marine health' },
+  { e:'🧪', strong:'Collaborative Lab', s:'Research conducted within Dr. Amit Kumar’s Marine Biology Lab' },
 ]
 
 export default function Research() {
@@ -30,9 +49,9 @@ export default function Research() {
         <MarineBackground />
         <div className="orb-bg orb-1" /><div className="orb-bg orb-2" />
         <div className="container">
-          <div className="section-tag">Research</div>
+          <div className="section-tag">Research & Publications</div>
           <h1>Scientific Contributions</h1>
-          <p>Connecting science communication with academic integrity through ORCID and beyond.</p>
+          <p>Connecting rigorous taxonomy and carcinology with open academic integrity.</p>
         </div>
       </div>
 
@@ -50,7 +69,7 @@ export default function Research() {
               <p>
                 An internationally recognized researcher identifier, ORCID connects
                 Kunjulakshmi's scientific contributions to the global academic ecosystem,
-                documenting research outputs and affiliations in marine ecology and science communication.
+                documenting research outputs and affiliations spanning taxonomy, crustacean biology, and marine ecology.
               </p>
               <a
                 href="https://orcid.org/0000-0001-9003-0972"
@@ -65,41 +84,48 @@ export default function Research() {
         </div>
       </section>
 
-      {/* Research Areas */}
+      {/* Publications List */}
       <section className="research-areas">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
-            <div className="section-tag">Focus Areas</div>
-            <h2 className="section-title">Research Interests</h2>
+            <div className="section-tag">Bibliography</div>
+            <h2 className="section-title">Peer-Reviewed Publications</h2>
           </div>
-          <div className="research-grid">
-            {RESEARCH_AREAS.map((r, i) => (
-              <div key={r.h} className="research-card" data-aos="fade-up" data-aos-delay={String((i % 3) * 100)}>
-                <div className="rc-number">{r.n}</div>
-                <div className="rc-icon">{r.e}</div>
-                <h3>{r.h}</h3>
-                <p>{r.p}</p>
-                <div className="rc-tags">
-                  {r.tags.map(t => <span key={t} className="meta-tag">{t}</span>)}
-                </div>
+          <div className="pub-timeline">
+            {PUBLICATIONS.map((pub, i) => (
+              <div key={i} className="research-card pub-card-wide" data-aos="fade-up" data-aos-delay={String((i % 3) * 100)}>
+                <div className="rc-number">{pub.date}</div>
+                <div className="rc-journal">{pub.journal}</div>
+                <h3>{pub.title}</h3>
+                {pub.doi && (
+                  <div className="pub-links">
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="doi-link">
+                      <strong>DOI:</strong> {pub.doi}
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Electric Ray Spotlight */}
+      {/* Crustacean Spotlight */}
       <section className="spotlight-section">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
             <div className="section-tag">Species Focus</div>
-            <h2 className="section-title">The Electric Ray — A Study in Wonder</h2>
+            <h2 className="section-title">The Wonders of Carcinology</h2>
           </div>
           <div className="spotlight-grid">
             <div className="spotlight-facts" data-aos="fade-right">
-              <h3>Torpediniformes — Key Facts</h3>
+              <h3>Shrimps, Crabs & Crustaceans</h3>
+              <p style={{color: '#8ab4c8', marginBottom: '24px', lineHeight: 1.6}}>
+                My primary research space involves uncovering new species, analyzing morphology under the scope, 
+                and resolving complex crustacean taxonomy across freshwater and marine ecosystems.
+              </p>
               <div className="fact-list">
-                {RAY_FACTS.map(f => (
+                {SHRIMP_FACTS.map(f => (
                   <div key={f.strong} className="fact-item">
                     <div className="fi-icon">{f.e}</div>
                     <div className="fi-text">
@@ -121,21 +147,19 @@ export default function Research() {
                       <stop offset="100%" stopColor="rgba(6,182,212,0.05)" />
                     </radialGradient>
                   </defs>
-                  <path d="M100 20 Q150 0 185 40 Q170 55 100 60 Q30 55 15 40 Q50 0 100 20Z"
-                    fill="url(#rg)" stroke="rgba(6,182,212,0.6)" strokeWidth="1.5" />
-                  <path d="M100 60 Q103 80 107 105 Q101 100 100 112 Q99 100 93 105 Q97 80 100 60Z"
-                    fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" strokeWidth="1.2" />
-                  <circle cx="86" cy="35" r="4" fill="rgba(56,189,248,0.5)" stroke="rgba(6,182,212,0.8)" strokeWidth="1" />
-                  <circle cx="114" cy="35" r="4" fill="rgba(56,189,248,0.5)" stroke="rgba(6,182,212,0.8)" strokeWidth="1" />
-                  <path d="M70 30 L65 38 L72 38 L67 46" stroke="#facc15" strokeWidth="2" strokeLinecap="round" fill="none"
-                    style={{ animation: 'boltFlash 2s ease-in-out infinite' }} />
-                  <path d="M130 30 L135 38 L128 38 L133 46" stroke="#facc15" strokeWidth="2" strokeLinecap="round" fill="none"
-                    style={{ animation: 'boltFlash 2s ease-in-out infinite 0.4s' }} />
+                  
+                  {/* Stylized Shrimp representation */}
+                  <path d="M40 70 Q 80 30 130 50 Q 160 70 170 50" fill="none" stroke="rgba(6,182,212,0.6)" strokeWidth="8" strokeLinecap="round" />
+                  <path d="M40 70 Q 60 75 80 90" fill="none" stroke="rgba(6,182,212,0.4)" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M60 60 Q 80 65 100 80" fill="none" stroke="rgba(6,182,212,0.4)" strokeWidth="3" strokeLinecap="round" />
+                  <circle cx="160" cy="55" r="4" fill="rgba(56,189,248,0.9)" />
+                  <path d="M160 55 Q 180 30 190 60 M165 52 Q 195 20 185 70" fill="none" stroke="rgba(56,189,248,0.6)" strokeWidth="1.5" />
+                  
                 </svg>
                 <div className="ray-pulses">
                   <div className="ray-pulse p1" /><div className="ray-pulse p2" /><div className="ray-pulse p3" />
                 </div>
-                <div className="ray-label">Electric Ray<br /><em>Torpediniformes</em></div>
+                <div className="ray-label">Decapoda: Caridea<br /><em>Freshwater & Marine Shrimps</em></div>
               </div>
             </div>
           </div>

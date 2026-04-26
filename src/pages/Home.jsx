@@ -5,10 +5,10 @@ import useAOS from '../hooks/useAOS'
 import './Home.css'
 
 const PHRASES = [
+  'Marine Researcher',
+  'Carcinologist (Crustacean Study)',
+  'Shrimp Taxonomist',
   'Science Communicator',
-  'Marine Ecology Enthusiast',
-  'Storyteller & Writer',
-  'Curiosity-Driven Researcher',
   '"That Shrimply Amazing Girl!"',
 ]
 
@@ -80,7 +80,7 @@ function StatCard({ count, label, icon, delay }) {
   }, [])
   return (
     <div className="stat-card" ref={ref} data-aos="fade-up" data-aos-delay={delay}>
-      {count ? <div className="stat-number">{c}</div> : <div className="stat-icon">{icon}</div>}
+      {count ? <div className="stat-number">{c}+</div> : <div className="stat-icon">{icon}</div>}
       <div className="stat-label">{label}</div>
     </div>
   )
@@ -95,7 +95,7 @@ export default function Home() {
     <main>
       {/* ── HERO ── */}
       <section className="hero">
-        <div className="hero-bg">
+         <div className="hero-bg">
           <MarineBackground />
           <div className="orb orb-1" /><div className="orb orb-2" /><div className="orb orb-3" />
           <div className="wave-container">
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-content">
-          <div className="hero-badge"><span className="badge-dot" /> Marine Science · Science Communication · Writing</div>
+          <div className="hero-badge"><span className="badge-dot" /> Carcinology · Taxonomy · Science Communication</div>
           <h1 className="hero-title">
             <span className="title-line">Kunjulakshmi</span>
             <span className="title-highlight">K.</span>
@@ -119,32 +119,31 @@ export default function Home() {
             <span className="typewriter">{typed}</span>
           </p>
           <p className="hero-desc">
-            Science communicator &amp; writer passionate about the underwater world's wonders —
-            turning complex marine ecology and science into stories everyone can feel curious about.
+            Marine researcher in Dr. Amit Kumar's Lab at Sathyabama Institute, passionately exploring the world of crustaceans. Highlighting biodiversity through shrimp taxonomy and sharing the wonders of the deep through accessible science writing.
           </p>
           <div className="hero-actions">
-            <Link to="/writing" className="btn-primary">Explore My Writing <span>→</span></Link>
-            <Link to="/about" className="btn-ghost">Learn More</Link>
+            <Link to="/research" className="btn-primary">Explore Research <span>→</span></Link>
+            <Link to="/writing" className="btn-ghost">Read My Writing</Link>
           </div>
           <div className="hero-scroll-hint">
             <div className="scroll-mouse"><div className="scroll-wheel" /></div>
             <span>Scroll to explore</span>
           </div>
         </div>
-        <div className="floating-icon icon-fish">🐟</div>
-        <div className="floating-icon icon-ray">🦈</div>
+        <div className="floating-icon icon-fish">🦐</div>
+        <div className="floating-icon icon-ray">🦀</div>
         <div className="floating-icon icon-coral">🪸</div>
-        <div className="floating-icon icon-wave">🌊</div>
+        <div className="floating-icon icon-wave">🔬</div>
       </section>
 
       {/* ── STATS ── */}
       <section className="stats-section">
         <div className="container">
           <div className="stats-grid">
-            <StatCard count={296} label="Posts & Threads" delay="0" />
-            <StatCard count={166} label="Followers on X" delay="100" />
-            <StatCard icon="📝" label="Science Writer" delay="200" />
-            <StatCard icon="🔬" label="ORCID Researcher" delay="300" />
+            <StatCard count={5} label="Peer-Reviewed Publications" delay="0" />
+            <StatCard count={4} label="Discovered & Described Species" delay="100" />
+            <StatCard icon="🔍" label="Shrimp Taxonomist" delay="200" />
+            <StatCard icon="🔬" label="Marine Biology Lab" delay="300" />
           </div>
         </div>
       </section>
@@ -157,16 +156,17 @@ export default function Home() {
               <div className="section-tag">About Me</div>
               <h2 className="section-title">That <em>Shrimply Amazing</em> Girl!</h2>
               <p>
-                I'm Kunjulakshmi — a curious soul navigating the fascinating intersection of marine ecology,
-                science communication, and storytelling. My work bridges the gap between complex scientific
-                discoveries and public understanding.
+                I'm Kunjulakshmi — a curious carcinologist navigating the fascinating intersection of marine ecology,
+                shrimp taxonomy, and science communication. Working under Dr. Amit Kumar's Marine Biology Lab, my research 
+                involves extensive study of freshwater and marine crustaceans along the Indian coast and Western Ghats.
               </p>
               <p>
-                Through <strong>The Curiosity Quotient</strong> on Substack, I cover science events, lectures,
-                and marine biodiversity stories that spark wonder and drive awareness for ocean conservation.
+                Whether I'm formally documenting the rediscovery of the genus <em>Atyopsis</em> after 72 years, or writing engaging stories 
+                for <strong>The Curiosity Quotient</strong> on Substack, my goal is to bridge the gap between 
+                complex scientific discoveries and public wonder.
               </p>
               <div className="about-tags">
-                {['🌊 Marine Ecology','🔬 Science Communication','📖 Writing','🐚 Biodiversity','🦑 Marine Life'].map(t => (
+                {['🦐 Carcinology','🔬 Species Taxonomy','📖 Science Writing','🐚 Biodiversity','🧪 Molecular Ecology'].map(t => (
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
@@ -184,49 +184,49 @@ export default function Home() {
                   }
                 </div>
                 <div className="profile-photo-badge top-badge">🦐 That Shrimply Amazing Girl!</div>
-                <div className="profile-photo-badge bottom-badge">🌊 @KKunjulakshmi</div>
+                <div className="profile-photo-badge bottom-badge">🌊 Sathyabama Institute Lab</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FEATURED WRITING ── */}
+      {/* ── FEATURED WRITING & RESEARCH ── */}
       <section className="featured-section">
         <div className="container">
           <div className="section-header" data-aos="fade-up">
             <div className="section-tag">Featured Work</div>
-            <h2 className="section-title">Stories From the Deep</h2>
-            <p className="section-subtitle">Science communication that bridges curiosity and knowledge</p>
+            <h2 className="section-title">Discovering Hidden Crustaceans</h2>
+            <p className="section-subtitle">Bridging rigorous taxonomy with accessible science communication</p>
           </div>
           <div className="writing-grid">
             <article className="writing-card featured-card" data-aos="fade-up">
-              <div className="article-category">🌊 Marine Ecology</div>
-              <h3>An Electric Sunday: Science Lecture from Chennai's Pint of View</h3>
-              <p>Professor Amit Kumar's "Shock in the Sea" delved into coral reefs, the evolution of marine biodiversity, and healthy fishing practices — all from the perspective of an electric ray.</p>
+              <div className="article-category">🔬 Taxonomy & Discovery</div>
+              <h3>Rediscovery of the genus Atyopsis (Decapoda: Atyidae) in India</h3>
+              <p>Following a 72-year gap, we rediscovered the genus Atyopsis in mainland India. This major taxonomic finding expands our understanding of freshwater shrimp distribution and highlights the importance of continued biodiversity surveys in aquatic ecosystems.</p>
               <div className="article-meta">
-                <span className="meta-tag">The Curiosity Quotient</span>
-                <span className="meta-tag">Substack</span>
+                <span className="meta-tag">Zootaxa Journal</span>
+                <span className="meta-tag">2025</span>
               </div>
-              <a href="https://thecuriosityquotient.substack.com/p/an-electric-sunday-pov-lecture-from" target="_blank" rel="noopener noreferrer" className="article-link">Read Article <span>→</span></a>
+              <Link to="/research" className="article-link">View Publication <span>→</span></Link>
             </article>
             <div className="writing-side">
               {[
-                { cat:'🐠 Biodiversity', h:'Marine Biodiversity & Climate Change', p:'Exploring how climate change threatens the rich tapestry of ocean life.' },
-                { cat:'🎙️ Science Events', h:'Pint of Science — Chennai Dispatches', p:'Live coverage and reflections from Chennai\'s most exciting science events.' },
-                { cat:'⚡ Marine Life', h:'Electric Rays — Nature\'s Shock Artists', p:'Diving deep into the biology of Torpediniformes and their 200-volt secrets.' },
-              ].map(item => (
-                <article key={item.h} className="writing-card-small" data-aos="fade-up">
+                { cat:'🦐 Carcinology', h:'Review of Caridina Freshwater Shrimps', p:'Analyzing research trends and identifying critical gaps in the biology of Caridina shrimps globally.' },
+                { cat:'🔍 Taxonomy', h:'Macrobrachium irwini sp. nov.', p:'The discovery and formal description of a completely new species of freshwater shrimp from the Western Ghats.' },
+                { cat:'🪸 Marine Ecology', h:'Dendronephthya corals & associated crustaceans', p:'Documenting new coral species and their intricate symbiotic relationships with crustaceans in Chennai.' },
+              ].map((item, i) => (
+                <article key={item.h} className="writing-card-small" data-aos="fade-up" data-aos-delay={String(i*100)}>
                   <div className="article-category">{item.cat}</div>
                   <h4>{item.h}</h4>
                   <p>{item.p}</p>
-                  <Link to="/writing" className="small-link">View Writing →</Link>
+                  <Link to="/research" className="small-link">View Research →</Link>
                 </article>
               ))}
             </div>
           </div>
           <div className="section-cta" data-aos="fade-up">
-            <Link to="/writing" className="btn-outline">View All Writing</Link>
+            <Link to="/research" className="btn-outline">View All Publications</Link>
           </div>
         </div>
       </section>
@@ -240,12 +240,12 @@ export default function Home() {
           </div>
           <div className="topics-grid">
             {[
-              { e:'🌊', h:'Marine Ecology', p:'Understanding the intricate web of ocean life, from microbes to megafauna' },
-              { e:'🪸', h:'Coral Reef Systems', p:'Biodiversity hotspots under threat — why they matter and how to protect them' },
-              { e:'⚡', h:'Electric Marine Life', p:'The shocking world of electric rays, their anatomy, physiology, and survival' },
-              { e:'📢', h:'Science Communication', p:'Translating jargon-rich science into accessible, emotionally resonant stories' },
-              { e:'🎣', h:'Sustainable Fishing', p:'Advocating for responsible practices that protect ocean biodiversity' },
-              { e:'🌡️', h:'Climate & Oceans', p:'How global warming reshapes the underwater world we\'re only beginning to understand' },
+              { e:'🦐', h:'Carcinology', p:'Extensive taxonomic and morphological study of both freshwater and marine crustaceans.' },
+              { e:'🔬', h:'Molecular Ecology', p:'Utilizing genetic tools alongside morphology to precisely identify and map crustacean lineages.' },
+              { e:'🪸', h:'Benthic Ecosystems', p:'Studying the life lurking at the bottom of aquatic bodies — from crabs to elusive shrimp species.' },
+              { e:'📢', h:'Science Communication', p:'Translating jargon-rich science into accessible, emotionally resonant stories on Substack.' },
+              { e:'🌊', h:'Biodiversity Surveys', p:'Conducting field surveys along the Indian coast and Western Ghats to monitor species health.' },
+              { e:'🧪', h:'Academic Collaboration', p:'Working within Dr. Amit Kumar\'s lab to tackle broad interdisciplinary challenges in marine ecology.' },
             ].map((t, i) => (
               <div key={t.h} className="topic-card" data-aos="zoom-in" data-aos-delay={String(i*100)}>
                 <div className="topic-emoji">{t.e}</div>
@@ -263,8 +263,8 @@ export default function Home() {
           <div className="connect-card" data-aos="fade-up">
             <div className="connect-inner">
               <div className="connect-text">
-                <h2>Let's Explore Together</h2>
-                <p>Follow along as I dive deeper into the ocean of science, stories, and curiosity.</p>
+                <h2>Let's Discover Together</h2>
+                <p>Follow along as I uncover new species and dive deeper into the world of carcinology and storytelling.</p>
               </div>
               <div className="social-links">
                 {[
